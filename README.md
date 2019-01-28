@@ -1,3 +1,3 @@
 # Lab1
 Lab 1 Hello!
-Group 7
+Group 7 team
