@@ -1,7 +1,7 @@
-##Lab #1
+**Lab #1
 
-_Course name_: STAT 585
-_Team members_: Zahra Khoshmanesh,Gani Agadilov,Oscar Aguilar
+*Course name*: STAT 585
+*Team members*: Zahra Khoshmanesh,Gani Agadilov,Oscar Aguilar
 
 
 
