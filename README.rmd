@@ -21,4 +21,13 @@ It is better to know the list of packages that we need befor knitting.
 
 ##Deal with the weather (stations) ...
 
+
+
 ##... and some funny file formats
+
+```{r setup, include=FALSE}
+download.file('ftp://ftp.ncdc.noaa.gov/pub/data/ushcn/v2.5/ushcn.tavg.latest.raw.tar.gz', "C:/Users/Zara/Desktop/stat585/z.gz", method = "auto", quiet=FALSE)
+#install.packages('R.utils')
+library(R.utils)
+gunzip("C:/Users/Zara/Desktop/stat585/z.gz")
+```
