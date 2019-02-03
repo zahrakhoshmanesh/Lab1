@@ -1,4 +1,14 @@
 ---
-Title: Lab #1
-
+title: "Lab#1"
+author: "Zahra Khoshmanesh,Gani Agadilov,Oscar Aguilar"
+topic: "01"
+layout: post
+root: ../../../
 ---
+##Link RStudio and git
+
+##Build a book
+
+##Deal with the weather (stations) ...
+
+##... and some funny file formats
