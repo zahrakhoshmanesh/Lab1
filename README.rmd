@@ -9,6 +9,16 @@ root: ../../../
 
 ##Build a book
 
+* Deliverable (1): what is the last word in chapter 15? - You don't have to answer this question, if things don't work, but please answer the next one and see the next page.
+
+First I did not have package bookdown and could not knit it. 
+Again tried it after installing the bookdown package and again I did not have another package.
+
+* Deliverable (2): Write a paragraph on the biggest problem you encountered when you were building the book, and how you managed to solve it.
+
+In my view, needing to install many packages during the knitting stage was annoying. 
+It is better to know the list of packages that we need befor knitting.
+
 ##Deal with the weather (stations) ...
 
 ##... and some funny file formats
