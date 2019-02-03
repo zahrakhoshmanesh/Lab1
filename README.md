@@ -4,7 +4,7 @@ Course name: STAT 585
 
 Team members: Zahra Khoshmanesh,Gani Agadilov,Oscar Aguilar
 
-In this repository , we worked as a team on Lab 1 questions which are as follows:
+In this repository , we worked as a team on Lab 1 questions which are as follows. The soulution for the following questions are available in the readme.rmd file in our repository.
 
 #Building a book
 The goal of this part of the lab is to build the html version of the 2nd edition for Hadley Wickham's book Advanced R Programming from a github repository.
