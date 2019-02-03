@@ -6,7 +6,7 @@ Team members: Zahra Khoshmanesh,Gani Agadilov,Oscar Aguilar
 
 In this repository , we worked as a team on Lab 1 questions which are as follows. The soulution for the following questions are available in the readme.rmd file in our repository.
 
-#Building a book
+# Building a book
 The goal of this part of the lab is to build the html version of the 2nd edition for Hadley Wickham's book Advanced R Programming from a github repository.
 
 Steps:
@@ -19,7 +19,7 @@ Deliverable (1): what is the last word in chapter 15? - You don't have to answer
 
 Deliverable (2): Write a paragraph on the biggest problem you encountered when you were building the book, and how you managed to solve it.
 
-#US weather stations
+# US weather stations
 The National Climate Data Center at NOAA publishes information on temperature and precipation across a network of stations in the US.
 
 The Data can be accessed through ftp at ftp://ftp.ncdc.noaa.gov/pub/data/ushcn/v2.5, a code book with a description of the data structure is available at ftp://ftp.ncdc.noaa.gov/pub/data/ushcn/v2.5/readme.txt
