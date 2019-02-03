@@ -1,14 +1,7 @@
+##Lab #1
 
-Lab 1
-Hi!
-This is Oscar!
-
-Lab 1 Hello!
+_Course name_: STAT 585
+_Team members_: Zahra Khoshmanesh,Gani Agadilov,Oscar Aguilar
 
 
-
-Group 7 team members work together
-
-781
-ah!
 
