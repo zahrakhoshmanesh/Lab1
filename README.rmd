@@ -30,6 +30,52 @@ emoji
 
 ##Deal with the weather (stations) ...
 
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+## R-packages
+library(ggplot2)
+library(tidyverse)
+library(readr)
+library(dplyr)
+library(maps)
+```
+
+## Reading Weather Station Data
+
+In this section, we first read weather station data as follows:
+
+```{r}
+weather <- read_fwf('weather_stations.txt', fwf_widths(c(2, 1, 2, 7, 9, 10, 6, 3, 31, 7, 7, 7, 3)))
+
+## Here we categorize the elevations
+weather <- weather %>% mutate(Elevation = as.factor(ifelse(X7 < 500, 1,
+                                                 ifelse(500 <= X7 & X7 < 1000, 2, 
+                                                        ifelse(1000 <= X7 & X7 < 1500, 3, 
+                                                               ifelse(1500 <= X7 & X7 < 2000, 4, 5))))))
+
+```
+
+## Weahter Station Visualization
+
+In this section, we visualize the weather stations using their longitute, latitude and elevation as follows:
+
+```{r, warning = F}
+us <- map_data('state')
+
+p <- ggplot()
+p <- p + geom_polygon(data = us, aes(x = long, y = lat, group = 
+                      group), colour = "white", fill = "grey")
+p <- p + geom_point(data = weather, aes(x = X6, y = X5, colour = Elevation)) + theme(legend.position = "right")
+p <- p + scale_color_discrete(name = 'Elevation',
+                             breaks = c('1', '2', '3', '4', '5'),
+                             labels = c('< 500 m', '500-1000 m', '1000-1500 m', 
+                                        '1500-2000 m', '2000 m or more'))
+p <- p + ggtitle('Weather Stations')
+p
+```
+
+
 
 
 ##... and some funny file formats
