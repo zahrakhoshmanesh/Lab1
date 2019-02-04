@@ -19,7 +19,7 @@ Git hub account that allow us to knit the index.Rmd file. Generally, there was n
 stopped from solving the problem. We followed the instructions that given on the lab page and tried 
 to receive the html version of the book by installing all packages that require index.Rmd file.
 
-the list of packages that we got errors and installed them in order to be able to knit the index file are as follows:
+the list of some packages that we got errors and installed them in order to be able to knit the index file are as follows:
 bookdown
 emoji
 
