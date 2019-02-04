@@ -89,4 +89,12 @@ files <- untar("tmp.tar.gz", list = TRUE)
 
 ## Here we count the number of files
 length(files)
+
+## Finding the temperature file for Fort Dodge, IA
+## Note that, using the weather station file, we found out that 
+## the code associated to Fort Dodge, IA is USH00132999
+files[which(files == './ushcn.v2.5.5.20190204/USH00132999.raw.tavg')]
+
+## From the above, we see that the 300th file from the downloaded folder is the 
+## one that contains the temperature information associated to Fort Dodge, IA.
 ```
