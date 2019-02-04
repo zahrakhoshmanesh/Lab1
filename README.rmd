@@ -13,18 +13,6 @@ root: ../../../
 
 The last word in chapter 15 is pseudo-class. 
 
-The problem that we have met when we were building the book is lacking several packages. 
-In addition, we could not knit the index.Rmd file on one of our laptops. The error says that
- Introduction.rmd file cannot be read and some functions cannot be operated. The several types
- of errors showed up and we tried to solve it separately. We also installed packages from 
-Git hub account that allow us to knit the index.Rmd file. Generally, there was not a big problem that  stopped from solving the problem. We followed the instructions that given on the lab page and tried to receive the html version of the book by installing all packages that require index.Rmd file.
-
-The list of some packages that we got errors and installed them in order to be able to knit the index file are as follows:
-bookdown
-emoji
-
-
-
 * Deliverable (2): Write a paragraph on the biggest problem you encountered when you were building the book, and how you managed to solve it.
 
 The problem that we have met when we were building the book is lacking several packages. 
