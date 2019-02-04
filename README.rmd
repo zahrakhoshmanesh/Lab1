@@ -19,8 +19,11 @@ Git hub account that allow us to knit the index.Rmd file. Generally, there was n
 stopped from solving the problem. We followed the instructions that given on the lab page and tried 
 to receive the html version of the book by installing all packages that require index.Rmd file.
 
-First I did not have package bookdown and could not knit it. 
-Again tried it after installing the bookdown package and again I did not have another package.
+the list of packages that we got errors and installed them in order to be able to knit the index file are as follows:
+bookdown
+emoji
+
+
 
 * Deliverable (2): Write a paragraph on the biggest problem you encountered when you were building the book, and how you managed to solve it.
 
