@@ -99,10 +99,13 @@ files[which(files == './ushcn.v2.5.5.20190204/USH00132999.raw.tavg')]
 ## one that contains the temperature information associated to Fort Dodge, IA.
 
 #finding the related file from the csv file with using sql command
+#first install sqldf package
 library(sqldf)
 #install.packages('sqldf')
+# extract the value of coulumn 1 to 4 related to a row having "fort dofge"
 namesql<-sqldf("select X1,X2,X3,X4 from weather where X9 LIKE '%FORT DODGE%'")
 library(stringr)
+#paste all value of related x1 to x4 in 1 variable named namefile, this variable having the name of file we are interested
 namefile<-str_c(namesql, collapse = "")
 fullnamefile<-list.files( path = files, patt=namefile)
 fullnamefile
