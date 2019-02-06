@@ -97,4 +97,15 @@ files[which(files == './ushcn.v2.5.5.20190204/USH00132999.raw.tavg')]
 
 ## From the above, we see that the 300th file from the downloaded folder is the 
 ## one that contains the temperature information associated to Fort Dodge, IA.
+
+#finding the related file from the csv file with using sql command
+library(sqldf)
+#install.packages('sqldf')
+namesql<-sqldf("select X1,X2,X3,X4 from weather where X9 LIKE '%FORT DODGE%'")
+library(stringr)
+namefile<-str_c(namesql, collapse = "")
+fullnamefile<-list.files( path = files, patt=namefile)
+fullnamefile
+index<-which(files ==fullnamefile)
+index
 ```
