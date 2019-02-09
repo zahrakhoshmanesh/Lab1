@@ -107,10 +107,36 @@ gg <- gg + theme_map()
 gg
 
 ```
+## Add time zone to the US map
+```{r setup, include = FALSE}
+
+# US map with time zone for every county
+#install.packages("countytimezones")
+library(countytimezones)
+library(choroplethr)
+library(choroplethrMaps)
+library(ggplot2)
+library(dplyr)
+
+data(county_tzs)
+example_df <- data.frame(fips = county_tzs$fips,
+                         datetime = "2019-02-09 08:30")
+head(example_df)
+example_df <- add_local_time(df = example_df,
+                             fips = example_df$fips,
+                             datetime_colname = "datetime")
+head(example_df)
+
+to_plot <- example_df %>%
+  select(fips, local_time) %>%
+  mutate(local_time = factor(local_time)) %>%
+  dplyr::rename(region = fips, value = local_time)
+a <- CountyChoropleth$new(to_plot)
+a$ggplot_scale <- scale_fill_brewer(type = "qual", drop = FALSE)
+a$render()
 
 
-
-
+```
 ##... and some funny file formats
 
 ```{r setup, include = FALSE}
