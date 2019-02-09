@@ -74,6 +74,39 @@ p <- p + scale_color_discrete(name = 'Elevation',
 p <- p + ggtitle('Weather Stations')
 p
 ```
+## The US map  with AK and HI having state abbreviation ID in center
+
+```{r, warning = F}
+
+library(ggplot2)   
+library(ggalt)     # coord_proj
+library(albersusa) # devtools::install_github("hrbrmstr/albersusa")
+library(ggthemes)  # theme_map
+library(rgeos)     # centroids
+library(dplyr)
+#devtools::install_github("hrbrmstr/albersusa")
+
+# composite map with AK & HI
+usa_map <- usa_composite()
+
+# calculate the centroids for each state
+gCentroid(usa_map, byid=TRUE) %>% 
+  as.data.frame() %>% 
+  mutate(state=usa_map@data$iso_3166_2) -> centroids
+
+# make it usable in ggplot2
+usa_map <- fortify(usa_map)
+
+gg <- ggplot()
+gg <- gg + geom_map(data=usa_map, map=usa_map,
+                    aes(long, lat, map_id=id),
+                    color="blue", size=0.1, fill="green")
+gg <- gg + geom_text(data=centroids, aes(x, y, label=state), size=2)
+gg <- gg + coord_proj(us_laea_proj)
+gg <- gg + theme_map()
+gg
+
+```
 
 
 
