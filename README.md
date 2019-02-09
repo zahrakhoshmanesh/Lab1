@@ -35,8 +35,10 @@ Create a plot with ggplot2 to show latitude, longitude and elevation. Can you al
 Deliverable: include the code necessary to read the file and to create the plot in README.Rmd. Assume the data is in the same folder as the README.Rmd file.
 
 
-# Reference
+# References
+
   1- https://github.com/geanders/countytimezones
+  
   2- https://stackoverflow.com/questions/38021188/how-to-draw-u-s-state-map-with-hi-and-ak-with-state-abbreviations-centered-us
   
 
